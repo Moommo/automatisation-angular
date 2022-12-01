@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="justify-content-lg-center">
+    <h1 class="h1 text-primary"> Bienvenue sur la page des tests</h1>
+  </div>
+
+  <div>
+
+    <h3 class="h3">Test n°1  : Le score doit toujours être supérieur a 0 </h3>
+
+    <div class="justify-content">
+      <p>Clique sur un des boutons mais attention tu peux pas avoir un score négatif </p>
+      <div class="btn-toolbar" *ngIf="myScore>0; else elseAction">
+        <button class="btn btn-primary"  type="button" (click)="decrement()" > Clique ici </button>
+        <button class="btn btn-primary" type="button" (click)="increment()"> Clique ici </button>
+        <p class="text-dark"> Ton score actuel est de : {{myScore}}</p>
+      </div>
+      <ng-template #elseAction>
+        <div class="btn-toolbar">
+          <button class="btn btn-primary" type="button" disabled> Clique ici </button>
+          <button class="btn btn-primary" type="button" (click)="increment()"> Clique ici </button>
+          <p class="text-danger "> Ton score actuel est de : {{myScore}}</p>
+        </div>
+      </ng-template>
+    </div>
+
+    <hr>
+
+    <h3 class="h3">Test n°2  : La chaine de caractêre doit être composé de majuscule </h3>
+    <div class="container">
+
+    </div>
+
+  </div>
+</div>
